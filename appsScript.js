@@ -37,16 +37,3 @@ function getMoneyOwedInterest(date) {
 	let moneyOwed = princ * Math.pow((1 + (r/n)), n * t);
 	return moneyOwed;
 }
-
-//Refresh the text content of the page
-function refresh() {
-  let text = document.getElementById("text");
-  let text2 = document.getElementById("text2");
-  let text3 = document.getElementById("text3");
-  
-	let moneyOwed = getMoneyOwedInterest(new Date());
-	let roundedMoney = round(moneyOwed);
-	text.textContent = "You owe me: " + commaIfy(moneyOwed.toString())
-	text2.textContent = "Or: $" + commaIfy(roundedMoney.toString())
-	text3.textContent = "Total money gained from this loan: $" + commaIfy(round(roundedMoney - 100).toString());
-}
