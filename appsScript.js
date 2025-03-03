@@ -1,4 +1,4 @@
-//File for dealing with appsScript, returns as json the monies rj owes me
+//Contains shared code between this website and an appsScript
 
 //String MUST contain a . for it to be added some commas
 function commaIfy(str) {
